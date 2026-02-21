@@ -1,13 +1,13 @@
 const withdrawBtn = document.getElementById("withdraw-btn");
 
 withdrawBtn.addEventListener("click", function () {
-  const agentNum = document.getElementById("agent-number").value;
-  const amount = Number(document.getElementById("amount").value);
-  const balance = Number(document.getElementById("balance").innerText);
-  const PIN = document.getElementById("PIN").value;
-  console.log(typeof(amount),amount,typeof(balance),balance)
+  const agentNum = getInputValue("agent-number");
+  const amount = getInputValue("amount");
+  const PIN = getInputValue("PIN");
+  const balance = getBalance();
 
-  if (agentNum !== "12233344445"){
+
+  if (agentNum !== 12233344445){
     return window.alert("wrong agent number")
   }
   if( amount <= 0){
@@ -16,9 +16,10 @@ withdrawBtn.addEventListener("click", function () {
   if (amount > balance){
     return window.alert("low balance")
   }
-  if (PIN !== "1234"){
+  if (PIN !== 1234){
     return window.alert("wrong PIN");
   }
-  document.getElementById("balance").innerText=String( balance-amount);
+
+  newBalance(balance-amount)
   return window.alert("success");
 })
