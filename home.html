@@ -70,6 +70,41 @@
       </div>
     </section>
 
+    <section id="add-money" class="w-11/12 mx-auto py-5">
+      <h2 class="text-2xl font-bold mb-5">Add Money</h2>
+
+      <div class="card bg-base-100 shadow rounded-2xl">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <!-- bank name -->
+            <label class="label text-neutral font-bold " for="bank"> Bank Name </label>
+            <select name="bank" id="bank-name" class="select rounded-full bg-base-200 w-full">
+              <option disabled selected class="text-">Select a Bank</option>
+              <option value="ABC Bank">ABC Bank</option>
+              <option value="DEF Bank">DEF Bank</option>
+              <option value="GHI Bank">GHI Bank</option>
+            </select>
+            <br>
+            <!-- Bank Account Number -->
+            <label class="label text-neutral font-bold">Bank Account Number</label>
+            <input maxlength="11" minlength="11" type="text" id="bank-acc-number"
+              class="input rounded-full bg-base-200 w-full" placeholder="Enter Bank Account Number" />
+            <br>
+            <!-- Amount -->
+            <label class="label text-neutral font-bold">Amount</label>
+            <input type="text" id="add-money-amount" class="input rounded-full bg-base-200 w-full" placeholder="Enter Amount" />
+            <br>
+            <!-- PIN number -->
+            <label class="label text-neutral font-bold">Pin Number</label>
+            <input type="password" id="add-money-PIN" class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter 4 Digit PIN" />
+
+            <!-- Add money Button -->
+            <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
     <section id="cashout" class="w-11/12 mx-auto py-5">
       <h2 class="text-2xl font-bold mb-5">Cashout</h2>
 
@@ -77,9 +112,9 @@
         <div class="card-body">
           <fieldset class="fieldset">
             <!-- Agent Number -->
-            <label class="label text-neutral font-bold">Agent  Number</label>
-            <input maxlength="11" minlength="11" type="text" id="agent-number" class="input rounded-full bg-base-200 w-full"
-              placeholder="Enter Agent Number"  />
+            <label class="label text-neutral font-bold">Agent Number</label>
+            <input maxlength="11" minlength="11" type="text" id="agent-number"
+              class="input rounded-full bg-base-200 w-full" placeholder="Enter Agent Number" />
             <br>
             <!-- Amount -->
             <label class="label text-neutral font-bold">Amount</label>
@@ -87,7 +122,8 @@
             <br>
             <!-- PIN number -->
             <label class="label text-neutral font-bold">Pin Number</label>
-            <input type="password" id="PIN" class="input rounded-full bg-base-200 w-full" placeholder="Enter 4 Digit PIN"/>
+            <input type="password" id="PIN" class="input rounded-full bg-base-200 w-full"
+              placeholder="Enter 4 Digit PIN" />
 
             <!-- Withdraw Button -->
             <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
